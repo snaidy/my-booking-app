@@ -12,10 +12,10 @@ const [isLogin, setIsLogin] = useState(false);
       <Routes>
         <Route path="/">
             <Route element={<PublicRouter isAutenticate={isLogin}/>}> 
-            <Route path="login" element={<Login/>} />
+            <Route path="login" element={<Login signIn={setIsLogin}/>} />
             </Route>
             <Route element={<PrivateRouter isAutenticate={isLogin}/>}>
-            <Route index  element={<Home/>} />
+            <Route index  element={<Home signIn={setIsLogin}/>} />
                  </Route>
         </Route>
       </Routes>

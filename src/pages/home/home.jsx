@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Home = () => {
+const Home = ({signIn}) => {
   return (
-    <div>Home</div>
+    <div>
+      <button onClick={()=>signIn(false)}>Cerrar sesión</button>
+    </div>
   )
 }
 
